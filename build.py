@@ -1,6 +1,6 @@
 def build(num):
     if num is None:
-        raise TypeError('num cannot be None')
+      return False
     if num == 0 or num == 1:
         return num
     else:
@@ -9,6 +9,3 @@ def build(num):
         even = (num & int('0101010101010101',2))
         even = even << 1
         return odd | even
-
-value = build(10)
-print(value)
